@@ -27,6 +27,12 @@ Mural is not notarized yet. On first launch, right-click Mural in Applications a
 xattr -dr com.apple.quarantine "/Applications/Mural.app"
 ```
 
+To skip the quarantine prompt at install time:
+
+```bash
+brew install --cask --no-quarantine gaorfg-bit/mural/mural-macos
+```
+
 ## Uninstall
 
 ```bash
