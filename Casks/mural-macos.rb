@@ -1,6 +1,6 @@
 cask "mural-macos" do
-  version "0.1.0"
-  sha256 "3bf28b83bf42b28280ced6297bd9319e99b247b346a4dab57a857a0dba4b39e5"
+  version "0.1.1"
+  sha256 "5aa3c86735329d607cf3ebc214280eeb5b41b436e901c3fe093f6b650ab2a84f"
 
   url "https://github.com/gaorfg-bit/homebrew-mural/releases/download/v#{version}/Mural-#{version}.dmg"
   name "Mural"
@@ -13,8 +13,10 @@ cask "mural-macos" do
   app "Mural.app"
 
   caveats <<~EOS
-    Mural is not notarized yet. On first launch, right-click Mural in Applications
-    and choose Open, or remove the quarantine attribute:
-      xattr -dr com.apple.quarantine "#{appdir}/Mural.app"
+    Mural 0.1.1 is a beta and is not notarized by Apple.
+    Read INSTALL.md and RELEASE-NOTES.md on the official release page.
+    If macOS blocks first launch, review Apple's guidance before using
+    System Settings > Privacy & Security > Open Anyway:
+      https://support.apple.com/102445
   EOS
 end

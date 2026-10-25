@@ -16,22 +16,18 @@ Or in one command:
 brew install --cask gaorfg-bit/mural/mural-macos
 ```
 
-Apple silicon, macOS 13 or later.
+Apple silicon. macOS 13 is the declared minimum; compatibility with older macOS versions still needs testing.
 
-## Unsigned build
+## Beta and first launch
 
-Mural is not notarized yet. On first launch, right-click Mural in Applications and choose
-**Open**, or remove the quarantine attribute:
+Mural 0.1.1 is a beta and is not notarized by Apple. Read the
+[installation notes](https://github.com/gaorfg-bit/homebrew-mural/releases/download/v0.1.1/INSTALL.md)
+and [known limits](https://github.com/gaorfg-bit/homebrew-mural/releases/download/v0.1.1/RELEASE-NOTES.md)
+before deciding to try it.
 
-```bash
-xattr -dr com.apple.quarantine "/Applications/Mural.app"
-```
-
-To skip the quarantine prompt at install time:
-
-```bash
-brew install --cask --no-quarantine gaorfg-bit/mural/mural-macos
-```
+If macOS blocks the first launch, review
+[Apple’s guidance](https://support.apple.com/102445) before using
+System Settings → Privacy & Security → Open Anyway.
 
 ## Uninstall
 
